@@ -1,0 +1,34 @@
+{
+  "name": "Create Property in KM",
+  "event": [
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": "var jsonData = JSON.parse(responseBody);\npostman.setGlobalVariable(\"km_property_id\", jsonData.id);"
+      }
+    }
+  ],
+  "request": {
+    "url": "{{protocol}}://marketplace.{{domain}}/api/v1/properties",
+    "method": "POST",
+    "header": [
+      {
+        "key": "Content-Type",
+        "value": "application/json",
+        "description": ""
+      },
+      {
+        "key": "Cookie",
+        "value": "{{km_cookie}}",
+        "description": ""
+      }
+    ],
+    "body": {
+      "mode": "raw",
+      "raw": "{\n  \"publisher_id\": {{km_publisher_id}},\n  \"name\": \"{{publisher_name}} - Property {{property_counter}}\",\n  \"approved_for_direct\": true,\n  \"approved_for_pmp\": true,\n  \"ad_tag_release_group_id\": 1,\n  \"countries\": [\n    1\n  ],\n  \"languages\": [],\n  \"categories\": [\n    {\n      \"id\": 1,\n      \"weight\": 10\n    }\n  ]\n}"
+    },
+    "description": "Creates a new property in KM under the parent publisher from above."
+  },
+  "response": []
+}

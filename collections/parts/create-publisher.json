@@ -1,0 +1,41 @@
+{
+  "name": "Create Publisher in KM",
+  "event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": "var jsonData = JSON.parse(responseBody);\npostman.setGlobalVariable(\"km_publisher_id\", jsonData.id);"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": "postman.setGlobalVariable(\"property_counter\", 1);"
+					}
+				}
+			],
+  "request": {
+    "url": "{{protocol}}://marketplace.{{domain}}/api/v1/publishers",
+    "method": "POST",
+    "header": [
+      {
+        "key": "Content-Type",
+        "value": "application/json",
+        "description": ""
+      },
+      {
+        "key": "Cookie",
+        "value": "{{km_cookie}}",
+        "description": ""
+      }
+    ],
+    "body": {
+      "mode": "raw",
+      "raw": "{\n  \"name\": \"{{publisher_name}}\",\n  \"tier\": 1,\n  \"goal_type\": \"commitment\",\n  \"contract_type\": \"contract\",\n  \"approved_for_direct\": true,\n  \"approved_for_pmp\": true,\n  \"pub_director_id\": 41250,\n  \"pub_coordinator_id\": 2833679,\n  \"pub_manager_id\": 45342,\n  \"logo_id\": null\n}"
+    },
+    "description": "Creates a new publisher in KM"
+  },
+  "response": []
+}

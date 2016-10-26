@@ -1,0 +1,120 @@
+[
+  {
+    "name": "Create ATF Ad Slot in KM",
+    "event": [
+      {
+        "listen": "test",
+        "script": {
+          "type": "text/javascript",
+          "exec": "var jsonData = JSON.parse(responseBody);\npostman.setGlobalVariable(\"km_ad_slot_id\", jsonData.id);"
+        }
+      }
+    ],
+    "request": {
+      "url": "{{protocol}}://marketplace.{{domain}}/api/v1/ad-slots",
+      "method": "POST",
+      "header": [
+        {
+          "key": "Content-Type",
+          "value": "application/json",
+          "description": ""
+        },
+        {
+          "key": "Cookie",
+          "value": "{{km_cookie}}",
+          "description": ""
+        }
+      ],
+      "body": {
+        "mode": "raw",
+        "raw": "{\n  \"type_id\": 2,\n  \"platform\": 1,\n  \"property_id\": {{km_property_id}},\n  \"integration_type\": \"ad_tag\",\n  \"ad_unit_formats\": [\n    3,\n    4,\n    5,\n    6,\n    7,\n    8,\n    14,\n    17,\n    18,\n    20\n  ]\n}"
+      },
+      "description": "Creates a new ad slot in KM under the parent property from above."
+    },
+    "response": []
+  },
+  {
+    "name": "Approve all the formats for ATF Ad Slot",
+    "request": {
+      "url": "{{protocol}}://marketplace.{{domain}}/api/v1/ad-slot-format-approval/{{km_ad_slot_id}}",
+      "method": "PUT",
+      "header": [
+        {
+          "key": "Content-Type",
+          "value": "application/json",
+          "description": ""
+        },
+        {
+          "key": "Cookie",
+          "value": "{{km_cookie}}",
+          "description": ""
+        }
+      ],
+      "body": {
+        "mode": "raw",
+        "raw": "{\n  \"ad_unit_formats\": [\n    {\n      \"id\": 3,\n      \"approved_for_direct\": 1,\n      \"approved_for_pmp\": 1\n    },\n    {\n      \"id\": 4,\n      \"approved_for_direct\": 1,\n      \"approved_for_pmp\": 1\n    },\n    {\n      \"id\": 5,\n      \"approved_for_direct\": 1,\n      \"approved_for_pmp\": 1\n    },\n    {\n      \"id\": 6,\n      \"approved_for_direct\": 1,\n      \"approved_for_pmp\": 1\n    },\n    {\n      \"id\": 7,\n      \"approved_for_direct\": 1,\n      \"approved_for_pmp\": 1\n    },\n    {\n      \"id\": 8,\n      \"approved_for_direct\": 1,\n      \"approved_for_pmp\": 1\n    },\n    {\n      \"id\": 14,\n      \"approved_for_direct\": 1,\n      \"approved_for_pmp\": 1\n    },\n    {\n      \"id\": 17,\n      \"approved_for_direct\": 1,\n      \"approved_for_pmp\": 1\n    },\n    {\n      \"id\": 18,\n      \"approved_for_direct\": 1,\n      \"approved_for_pmp\": 1\n    },\n    {\n      \"id\": 20,\n      \"approved_for_direct\": 1,\n      \"approved_for_pmp\": 1\n    }\n  ]\n}"
+      },
+      "description": "Approves all of the formats for Direct and PMP for the previously added ad slot."
+    },
+    "response": []
+  },
+  {
+    "name": "Create FIA Ad Slot in KM",
+    "event": [
+      {
+        "listen": "test",
+        "script": {
+          "type": "text/javascript",
+          "exec": "var jsonData = JSON.parse(responseBody);\npostman.setGlobalVariable(\"km_ad_slot_id\", jsonData.id);"
+        }
+      }
+    ],
+    "request": {
+      "url": "{{protocol}}://marketplace.{{domain}}/api/v1/ad-slots",
+      "method": "POST",
+      "header": [
+        {
+          "key": "Content-Type",
+          "value": "application/json",
+          "description": ""
+        },
+        {
+          "key": "Cookie",
+          "value": "{{km_cookie}}",
+          "description": ""
+        }
+      ],
+      "body": {
+        "mode": "raw",
+        "raw": "{\n  \"type_id\": 28,\n  \"platform\": 5,\n  \"property_id\": {{km_property_id}},\n  \"integration_type\": \"dfp\",\n  \"ad_unit_formats\": [\n    9\n  ]\n}"
+      },
+      "description": "Creates a new ad slot in KM under the parent property from above."
+    },
+    "response": []
+  },
+  {
+    "name": "Approve all the formats for FIA Ad Slot",
+    "request": {
+      "url": "{{protocol}}://marketplace.{{domain}}/api/v1/ad-slot-format-approval/{{km_ad_slot_id}}",
+      "method": "PUT",
+      "header": [
+        {
+          "key": "Content-Type",
+          "value": "application/json",
+          "description": ""
+        },
+        {
+          "key": "Cookie",
+          "value": "{{km_cookie}}",
+          "description": ""
+        }
+      ],
+      "body": {
+        "mode": "raw",
+        "raw": "{\n  \"ad_unit_formats\": [\n    {\n      \"id\": 9,\n      \"approved_for_direct\": 1,\n      \"approved_for_pmp\": 1\n    }\n  ]\n}"
+      },
+      "description": "Approves all of the formats for Direct and PMP for the previously added ad slot."
+    },
+    "response": []
+  }
+]

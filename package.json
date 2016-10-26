@@ -1,0 +1,20 @@
+{
+  "name": "test-data-seeder",
+  "version": "1.0.0",
+  "description": "Seeder app for generating test data for KM",
+  "main": "main.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "npm start"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "command-line-args": "^3.0.1",
+    "command-line-arguments": "^1.1.1",
+    "json5": "^0.5.0",
+    "lodash": "^4.16.4",
+    "newman": "^3.2.0",
+    "prompt": "^1.0.0"
+  }
+}

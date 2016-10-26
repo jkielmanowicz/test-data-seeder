@@ -1,0 +1,34 @@
+{
+  "id": "55ff2f3c-9b73-ae3e-4a6a-df2e6e9b3767",
+  "name": "Docker",
+  "values": [
+    {
+      "key": "domain",
+      "type": "text",
+      "value": "krg.io",
+      "enabled": true
+    },
+    {
+      "key": "port",
+      "type": "text",
+      "value": "80",
+      "enabled": true
+    },
+    {
+      "key": "protocol",
+      "type": "text",
+      "value": "http",
+      "enabled": true
+    },
+    {
+      "key": "km_cookie",
+      "type": "text",
+      "value": "login_email=javier%40kargo.com; MP_LOCAL_ID=h3sto6kuc6dq39l89nprv28kc2; fs_uid=www.fullstory.com`1469J`5661813022654464:5629499534213120; referrer-controller=/dashboard; expires=Sat Oct 22 2016 11:14:17 GMT-0400 (EDT); tz_name=America/New_York; path=/; access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJqYXZpZXJAa2FyZ28uY29tIiwiZXhwIjoxNDc3MjY3MjAwMDAwLCJpc3N1ZWQiOjE0NzcwNjI4NTU4NjMsInR5cGUiOiJhY2Nlc3NfdG9rZW4iLCJjaWQiOiI2YjgyZTIyYWUzMzcwMTE5MGYwMjk2YjQ2MGYwN2UxOCIsInVzZXJJZCI6NTd9.po5BZheO_lnL61XJg7IU-QWiBFcu2awK1sB1py3ou4XZE3usmPR_0ec34hXK6HTW-urXJ_VNPlTHwQdUVlzht1PqPwCAI_bic-tVDUE5ISx1DMyBiHcOyeBH0knE-Ks9cIO53U7w_SbArILXx8-WkEwyL5vBuhxj3zA7oigjpe11ByZr9gmfmG-gLjsmOiLvt1oUpjFc9CVaXYHNLztd0mn6Wn02o8I4EFJTtyuZiQ-22KNdhvSTxW7gEtPVEdYekhHttnc_3Dm279ALv-LjWsnKlZOrudI_ycYQHQ291lN5J4ObnZArmvV8wqi4AUy1_tSvEZBCBQ3SvEq09v3WkQ; refresh_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJqYXZpZXJAa2FyZ28uY29tIiwiaXNzdWVkIjoxNDc3MDYyODU1ODY3LCJ0eXBlIjoicmVmcmVzaF90b2tlbiIsInVzZXJJZCI6NTd9.jIJU5IW4jpEw6ZU4KtxSkxHPPP6Pbdp55jVSXu6NAZ6bkxXxx_RxWEu9eqqlCBRdD1AWEVI-Jod6pWRyKxS40AkjvQB_goNAZ7KaJGeINInXLdkwiTvk0FX_uFZvao352qdHrO0lUcz5DJ3kP7VmkZ7ZEsYDINsTBdIrh8yUfJQnlQsSsCIFTaUfh1jVNHsR-Uuf6-BmMfef6s-mft0-vKfPUNepIgTRsQf2K9rwdvFL5NGrrHbRiEcHbOk9PK_G-1AoafwlACCJI2vb7irUKnMihnbNqnEpXeFh79XNDaxJ2wOtKhb93F6m8FaL6gitgtufi7VG5_luF86peHjCcg; XSRF-TOKEN=db12d5495eaeba13fc2144d9dfa232c5385e229117cda9628c69cd1daff8ae5c",
+      "enabled": true
+    }
+  ],
+  "timestamp": 1477064564287,
+  "_postman_variable_scope": "environment",
+  "_postman_exported_at": "2016-10-21T15:52:05.784Z",
+  "_postman_exported_using": "Postman/4.8.0"
+}
